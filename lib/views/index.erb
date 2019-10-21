@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title>The Gossip Project</title>
+  </head>
+  <body>
+    <h1>Bonjour, cher utilisateur !</h1>
+    <h2>Bienvenue sur mon site de potins</h2>
+    <p>La liste des potins déjà créés :
+    	<% gossips.each do |gossip| %>
+        <p>
+          <%= gossip.author %><br/>
+          <%= gossip.content %>
+
+        </p>
+      <% end %>
+     </p>
+     <p><a href="/gossips/new/">Créer un nouveau potin</a></p>
+
+    <p>Voici les pages des potins déjà créés (clic droit puis ouvrir dans un nouvel onglet) :
+<!--On passe sur le tableau gossips avec each_index, ce qui renvoie index de chaque élément. On y ajoute 1 pour le faire correspondre à l'id du potin-->
+      <% gossips.each_index do |x| %>
+       <p>
+         <a href="localhost:4567/gossips/<%= x + 1 %>">page du potin n°<%= x + 1 %></a>
+       </p>
+      <% end %>
+     </p>
+
+
+
+  </body>
+</html>

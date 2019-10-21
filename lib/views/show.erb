@@ -1,0 +1,15 @@
+<html>
+  <head>
+    <title>Page potin</title>
+  </head>
+  <body>
+    <h1>PAGE POTIN</h2>
+    <h3>Voici la page du potin n°<%= "#{id}" %> :</h3>
+        <p>
+          L'auteur est : <%= single_gossip.author %><br/>
+          Le contenu est : <%= single_gossip.content %>
+        </p>
+      <p><a href="localhost:4567/gossips/<%= id %>/edit">Editer le potin n°<%= id %></a> (clic droit puis ouvrir dans un nouvel onglet)</p>
+      <p><a href="/">Revenir à la page d'accueil</a></p>
+  </body>
+</html>
